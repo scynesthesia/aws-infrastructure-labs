@@ -3,7 +3,7 @@
 ## Project 1: Multi-Tier High Availability Architecture
 This project demonstrates a secure, resilient VPC design aligned with AWS Best Practices.
 
-![Architecture Diagram](./aws-multi-tier-architecture.png)
+![Architecture Diagram](./Docs/aws-multi-tier-architecture.png)
 
 ### Key Features:
 * **High Availability:** Resources deployed across two Availability Zones.
