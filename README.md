@@ -74,18 +74,4 @@ This is a lab environment created for architecture practice, security design rev
 - VPC Flow Logs
 - AWS WAF integration
 - More modular Terraform structure
-  
----
-
-## Project 2: Cloud Security Hardening
-
-Focused on implementing IAM security standards, least-privilege access patterns, and monitoring concepts using AWS-native services such as CloudWatch.
-
-### Areas of Focus
-- IAM policy and role design
-- Security monitoring concepts
-- Access control hardening
-- AWS security best-practice alignment
-
----
 
