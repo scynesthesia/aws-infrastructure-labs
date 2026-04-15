@@ -48,6 +48,22 @@ This project also includes a Terraform implementation of the architecture shown 
 - EC2 application instances
 - Security Groups and target group configuration
 
+### How to Run
+
+This lab is intended to be deployed temporarily for testing and learning purposes.
+
+1. `terraform init`  
+   Initialize Terraform and download the AWS provider.
+
+2. `terraform plan`  
+   Review the execution plan and validate the resources to be created.
+
+3. `terraform apply`  
+   Deploy the lab infrastructure into AWS.
+
+4. `terraform destroy`  
+   Remove all resources after testing to avoid unnecessary cost.
+
 ### Notes
 This is a lab environment created for architecture practice, security design review, and infrastructure-as-code learning. It is not presented as a production-ready deployment.
 
