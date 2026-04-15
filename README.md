@@ -67,6 +67,14 @@ This lab is intended to be deployed temporarily for testing and learning purpose
 ### Notes
 This is a lab environment created for architecture practice, security design review, and infrastructure-as-code learning. It is not presented as a production-ready deployment.
 
+## Future Improvements
+- HTTPS listener with ACM certificates
+- Auto Scaling Group for application instances
+- CloudWatch alarms and logging expansion
+- VPC Flow Logs
+- AWS WAF integration
+- More modular Terraform structure
+  
 ---
 
 ## Project 2: Cloud Security Hardening
@@ -81,13 +89,3 @@ Focused on implementing IAM security standards, least-privilege access patterns,
 
 ---
 
-## Future Improvements
-- HTTPS listener with ACM certificates
-- Auto Scaling Group for application instances
-- CloudWatch alarms and logging expansion
-- VPC Flow Logs
-- AWS WAF integration
-- More modular Terraform structure
-
-### Project 2: Cloud Security Hardening
-* Focused on implementing IAM security standards and monitoring via CloudWatch.
