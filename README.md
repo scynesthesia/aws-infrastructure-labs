@@ -1,14 +1,15 @@
 # AWS Infrastructure & Security Labs
 
-A collection of cloud architecture projects focused on high availability, security best practices, and the principle of least privilege.
+## Project 1: Multi-Tier High Availability Architecture
+This project demonstrates a secure, resilient VPC design aligned with AWS Best Practices.
 
-### Project 1: Multi-Tier High Availability VPC
-* **Objective:** Design and deploy a resilient VPC architecture across multiple Availability Zones.
-* **Features:**
-    * Public and private subnet isolation.
-    * Layered security using Network ACLs and Security Groups.
-    * IAM roles and policies configured for cross-service resource interaction.
-* **Tools:** AWS Management Console, AWS CLI, (Optional: Terraform/CloudFormation).
+![Architecture Diagram](./aws-multi-tier-architecture.png)
+
+### Key Features:
+* **High Availability:** Resources deployed across two Availability Zones.
+* **Network Isolation:** EC2 instances reside in private subnets with no direct internet access.
+* **Secure Egress:** Private instances communicate with the internet via NAT Gateways in the public tier.
+* **Load Balancing:** Traffic is distributed via an Application Load Balancer (ALB).
 
 ### Project 2: Cloud Security Hardening
 * Focused on implementing IAM security standards and monitoring via CloudWatch.
