@@ -1,12 +1,34 @@
 # AWS Infrastructure & Security Labs
 
-A collection of hands-on AWS projects focused on resilient network design, security best practices, and least-privilege architecture.
+This project implements a multi-AZ AWS VPC architecture using public and private subnets.
+
+It includes:
+- VPC with segmented subnets across 2 Availability Zones
+- Internet Gateway and NAT Gateways for controlled connectivity
+- EC2 instances deployed in private subnets
+- Application Load Balancer handling public traffic
+- Security Groups and route tables enforcing access control
+
+The environment was deployed using Terraform and validated by testing connectivity, routing behavior, and access restrictions.
+
+## What was validated
+
+- Verified that private EC2 instances have outbound internet access via NAT Gateway
+- Confirmed that no direct inbound access to private instances is possible
+- Tested HTTP access through the Application Load Balancer
+- Validated routing between subnets using route tables
 
 ---
-
 ## Project 1: Multi-AZ VPC Architecture with Public and Private Subnets
 
-This project demonstrates a multi-tier AWS network architecture designed to improve availability, isolate workloads, and enforce controlled ingress and egress patterns. The lab was built to reflect core AWS architecture and cloud security concepts commonly used in real-world environments.
+Implemented a multi-tier AWS network architecture across multiple Availability Zones.
+
+- Separated public and private workloads using subnet segmentation
+- Restricted inbound traffic through an Application Load Balancer
+- Controlled outbound access from private instances using NAT Gateways
+- Applied layered security using Security Groups and route tables
+
+This setup was used to simulate real-world cloud networking and security patterns, focusing on isolation, controlled access, and resilience.
 
 ![Architecture Diagram](./Docs/aws-multi-tier-architecture.png)
 
