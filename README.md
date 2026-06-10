@@ -9,7 +9,7 @@ It includes:
 - Application Load Balancer handling public traffic
 - Security Groups and route tables enforcing access control
 
-The environment was deployed using Terraform and validated by testing connectivity, routing behavior, and access restrictions.
+The environment was deployed using Terraform and validated by testing connectivity, routing behavior, access restrictions, and intentional failure scenarios.
 
 ## What was validated
 
@@ -97,3 +97,22 @@ This is a lab environment created for architecture practice, security design rev
 - AWS WAF integration
 - More modular Terraform structure
 
+---
+
+## Failure Testing
+
+To validate network isolation and security controls, intentional misconfigurations were introduced and tested.
+
+### NAT Gateway Removal Test
+
+- Removed the default route (0.0.0.0/0) to the NAT Gateway from the private subnet route table
+- Result: private EC2 instances lost outbound internet connectivity
+- Verified using `curl` (request timed out)
+
+### Security Group Restriction Test
+
+- Removed HTTP (port 80) inbound rule from the Application Load Balancer Security Group
+- Result: application became inaccessible from the internet
+- Verified via browser (no response)
+
+These tests confirm that outbound access depends on NAT configuration and inbound access is strictly controlled by Security Groups.
